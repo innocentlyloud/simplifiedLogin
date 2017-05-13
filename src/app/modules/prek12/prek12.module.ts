@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Prek12Component } from './prek12.component';
-import { SelectStudentComponent } from './select-student/select-student.component';
-import { SelectClassComponent } from './select-class/select-class.component';
 import { CodeValidatorComponent } from './code-validator/code-validator.component';
 import {Prek12RoutingModule} from './prek12.routing.module';
 
-import { SectionService } from '../../services/prek12/section.service';
+import { Prek12Service } from '../../services/prek12/prek12.service';
+import { SectionListComponent } from './section-list/section-list.component';
+import { StudentListComponent } from './student-list/student-list.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    //NgModule,
     Prek12RoutingModule
   ],
-  declarations: [Prek12Component, SelectStudentComponent, SelectClassComponent, CodeValidatorComponent],
+  declarations: [Prek12Component, CodeValidatorComponent, SectionListComponent, StudentListComponent],
   exports: [Prek12Component],
-  providers: [ SectionService ]
+  providers: [ Prek12Service ]
 })
 export class Prek12Module { }

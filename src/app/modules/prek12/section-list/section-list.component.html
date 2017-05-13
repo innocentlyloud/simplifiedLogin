@@ -1,0 +1,10 @@
+<div class="container">
+   <div class="row justify-content-around">
+     <div class="col-6" *ngFor="let section of sections">
+       <div class="input-group" id={{section.id}} (click)="onSelect(section)" >
+        <span class="input-group-addon" id="btnGroupAddon">{{section.image}}</span>
+        <input type="button" class="form-control" placeholder="Input group example" value={{section.name}} aria-describedby="btnGroupAddon">
+      </div>
+    </div>
+   </div>
+</div>
